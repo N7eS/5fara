@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق تسجيل الخفارات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBwNVmGLny3MaNhZfZYaX8gIZykuu9FfBE",
+    authDomain: "na9erapp.firebaseapp.com",
+    projectId: "na9erapp",
+    storageBucket: "na9erapp.appspot.com",
+    messagingSenderId: "731578283144",
+    appId: "1:731578283144:web:d9489947657379eecd1b3d",
+    measurementId: "G-0SQP6BN8RY"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<body>
+    <div class="container">
+        <h1>تطبيق تسجيل الخفارات</h1>
+<p style="font-size: 12px; color: #ffffff; text-align: center;">تصميم وبرمجة ناصر المطيري</p>
+<p style="font-size: 10px; color: #ffffff; text-align: center;"><a href="http://na9er.net" target="_blank" style="color: #00aaff;">Na9er.net</a></p>
+
+        <div id="formContainer">
+            <button onclick="showRegisterForm()">تسجيل مستخدم جديد</button>
+            <button onclick="showLoginForm()">تسجيل الدخول</button>
+        </div>
+        
+        <div id="registerForm" class="form" style="display: none;">
+            <h2>تسجيل مستخدم جديد</h2>
+            <input type="text" id="newUsername" placeholder="اسم المستخدم" required>
+            <input type="password" id="newPassword" placeholder="كلمة المرور" required>
+            <button onclick="registerUser()">تسجيل</button>
+            <button onclick="goBack()">عودة</button>
+        </div>
+
+        <div id="loginForm" class="form" style="display: none;">
+            <h2>تسجيل الدخول</h2>
+            <input type="text" id="loginUsername" placeholder="اسم المستخدم" required>
+            <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+            <button onclick="loginUser()">دخول</button>
+            <button onclick="goBack()">عودة</button>
+        </div>
+
+        <div id="shiftContainer" style="display: none;">
+            <h2>تاريخ الخفارات</h2>
+            <input type="date" id="shiftDate">
+            <button onclick="addShift()">إضافة خفارة</button>
+            <ul id="shiftList"></ul>
+            <button onclick="logout()">تسجيل الخروج</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

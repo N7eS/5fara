@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c; /* خلفية رمادي غامق */
+    color: #ffffff; /* النص أبيض */
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #333333; /* خلفية الحاوية رمادي غامق */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #00aaff; /* الأزرق الفاتح */
+}
+
+.form {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00aaff; /* الأزرق الفاتح */
+    background-color: #ffffff; /* خلفية المربعات بيضاء */
+    color: #000000; /* النص داخل المربعات أسود */
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00aaff; /* أزرار زرقاء فاتحة */
+    color: #ffffff; /* النص أبيض */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0088cc; /* لون أغمق قليلاً عند التمرير */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #444444; /* فاصل رمادي غامق */
+}
