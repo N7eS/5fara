@@ -1,0 +1,26 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - main  # استبدل 'main' باسم الفرع الذي تستخدمه
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # استبدل '14' بالإصدار الذي تريده
+
+      - name: Install Firebase Tools
+        run: npm install -g firebase-tools
+
+      - name: Deploy to Firebase
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: firebase deploy --token $FIREBASE_TOKEN
